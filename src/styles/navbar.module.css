@@ -1,0 +1,44 @@
+/* You may want to adjust these colours. */
+.navbar {
+  /* Most of the styles for the nav are now global */
+}
+
+.nav-items button {
+  /*Base styles from tailwind that you can modify.*/
+}
+
+.nav-items button:hover{
+ /*Hover effects for buttons*/
+}
+
+.vacancy-button {
+/* Tailwind is still ok for styling here */
+}
+
+.dark-mode-toggle {
+/* Styles for the toggle button (circle, icon size, shadow) */
+background-color: white;
+color: gray-800;
+padding: 0.5rem; /* Adjust padding as needed */
+border-radius: 9999px; /* Make it a circle */
+font-size: 1.5rem; /* Adjust icon size */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.dark-mode-toggle:hover {
+/* Hover styles (e.g., slightly darker background) */
+background-color: #f0f0f0;
+}
+
+/* Dark mode specific styles */
+.dark-mode-toggle.dark {
+background-color: gray-700;
+color: yellow-400;
+}
+
+/*Example of updating colors.  Make sure you have global CSS styles to support them.*/
+body.dark {
+background-color: #1a202c;
+color: #fff;
+}

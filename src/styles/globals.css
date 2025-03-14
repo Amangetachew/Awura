@@ -1,0 +1,366 @@
+/* styles/global.css */
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* Global Reset */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  height: 100%;
+  line-height: 1.6;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Improved Container for Mobile */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px; /* Adjusted for better mobile spacing */
+  width: 100%; /* Ensure full width */
+}
+
+main {
+  padding-bottom: 50px;
+}
+
+/* Service Grid Improvements */
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    grid-template-columns: 1fr;
+    padding: 0 10px; /* Added mobile padding */
+  }
+}
+
+.service-box {
+  border: 2px solid #4a90e2;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  transition: all 0.4s ease-in-out;
+  width: 100%; /* Ensure full width */
+}
+
+/* Mobile Typography Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+
+  .service-box {
+    padding: 1rem;
+    min-height: auto; /* Better for mobile */
+  }
+}
+
+/* Product Card Mobile Fix */
+/* Updated Product Card Styles */
+.product-card {
+  width: 100%; /* Changed from 200% */
+  max-width: 400px; /* More reasonable max width */
+  margin: 0 auto; /* Center cards */
+}
+
+.product-card img {
+  max-height: 300px; /* Reduced from 350px */
+  width: 90%; /* Give some spacing */
+  margin: 0 auto; /* Center images */
+  object-fit: contain; /* Better for product images */
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    max-width: 100%; /* Full width on mobile */
+    padding: 10px;
+  }
+
+  .product-card img {
+    max-height: 250px; /* Smaller on mobile */
+    width: 85%;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card img {
+    max-height: 200px; /* Even smaller for phones */
+  }
+}
+.products-container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 15px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  width: 100%;
+  max-width: 350px; /* Optimal card width */
+  margin: 0 auto;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1);
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    grid-template-columns: 1fr;
+    padding: 1rem 10px;
+  }
+
+  .product-card {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+}
+
+/* Client Circles Update */
+.client-circle {
+  width: 120px; /* Reduced from 200px */
+  height: 120px;
+  margin: 0 auto; /* Center circles */
+}
+
+.client-circle img {
+  width: 90%; /* More breathing space */
+  height: 90%; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure proper fit */
+}
+
+@media (max-width: 768px) {
+  .client-circle {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .client-circle {
+    width: 80px;
+    height: 80px;
+    margin: 10px auto; /* Add spacing between circles */
+  }
+
+  .client-circle img {
+    width: 85%;
+    height: 85%;
+  }
+}
+
+/* Client Container Grid */
+.client-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  padding: 15px;
+}
+
+@media (max-width: 480px) {
+  .client-container {
+    grid-template-columns: repeat(3, 1fr); /* 3 per row on mobile */
+    gap: 10px;
+  }
+}
+
+/* Footer Mobile Optimization */
+.footer-container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.social-icons {
+  gap: 30px; /* Reduced from 100px */
+}
+
+/* Navbar Mobile Improvements */
+.navbar-container {
+  padding: 1rem 0;
+}
+
+.navbar-buttons {
+  width: 100%; /* Full width buttons */
+}
+
+@media (max-width: 768px) {
+  .navbar-button {
+    width: 100%;
+    padding: 0.8rem;
+  }
+}
+
+/* Removed Vacancy-Related Styles */
+/* (Deleted all .job-card, .apply-button, .join-team-section styles) */
+/* Services Section Updates */
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  justify-content: center; /* Center grid items */
+}
+
+.service-box {
+  border: 2px solid #4a90e2;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+  transition: all 0.4s ease-in-out;
+  max-width: 500px; /* Prevent over-stretching */
+  margin: 0 auto; /* Center boxes in grid cells */
+}
+
+@media (max-width: 768px) {
+  .service-container {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem;
+  }
+
+  .service-box {
+    width: 95%; /* Slightly smaller on mobile */
+    padding: 1rem;
+  }
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-box h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+  text-align: center; /* Center title */
+}
+
+.service-box p {
+  text-align: center; /* Center description */
+  font-size: 1rem;
+}
+/* Products Section with Navigation */
+.products-slider {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 0 60px; /* Space for buttons */
+}
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #4a90e2;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+.slider-btn:hover {
+  background: #357abd;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.product-card {
+  width: 300px;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .products-container {
+    padding: 0 40px;
+  }
+
+  .slider-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .product-card {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+/* Hero Section Styles */
+#hero {
+  background-color: white;
+}
+
+#hero h1 {
+  line-height: 5; /* Improve readability for large text */
+  font-size: 26px;
+  font-weight: 700;
+}
+
+#hero p {
+  margin-top: 1rem; /* Add spacing between title and description */
+  font-size: 20px;
+  font-style: italic;
+}
+
+/* Responsive Image Styling */
+.hero-image {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+.hero-image:hover {
+  transform: scale(1.05); /* Slight enlargement on hover */
+  box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Blurred Background Image */
+.bg-blur {
+  filter: blur(4px); /* Slightly stronger blur */
+  opacity: 0.7; /* Reduce opacity for better contrast */
+}
