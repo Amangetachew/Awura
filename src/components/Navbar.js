@@ -1,7 +1,5 @@
-"use client";
-
-import Link from "next/link";
-import { motion } from "framer-motion";
+import Link from "next/link"; // Import Link from Next.js for navigation
+import { motion } from "framer-motion"; // Import motion for animations
 
 const Navbar = () => {
   const scrollToSection = (id) => {
@@ -11,9 +9,9 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-md py-6 fixed w-full top-0 z-50">
       <div className="container mx-auto flex flex-col items-center justify-center px-6 space-y-4">
-        {/* Logo */}
-        <Link href="/" className="cursor-pointer flex items-center">
-          <Image src="/logo.png" width={150} height={150} alt="Company Logo" />
+        {/* Logo (Replaced with Text) */}
+        <Link href="/" className="cursor-pointer flex items-center text-2xl font-bold">
+          MyBrand
         </Link>
 
         {/* Navigation Items (Vertical Layout) */}
