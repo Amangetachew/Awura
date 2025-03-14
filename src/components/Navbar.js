@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
+import Image from "next/image"; // Added Image import
 
 const Navbar = () => {
   const scrollToSection = (id) => {
@@ -13,7 +14,13 @@ const Navbar = () => {
       <div className="container mx-auto flex flex-col items-center justify-center px-6 space-y-4">
         {/* Logo */}
         <Link href="/" className="cursor-pointer flex items-center">
-          <Image src="/logo.png" width={150} height={150} alt="Company Logo" />
+          <Image
+            src="/logo.png"
+            width={150}
+            height={150}
+            alt="Company Logo"
+            priority // Added for above-the-fold images
+          />
         </Link>
 
         {/* Navigation Items (Vertical Layout) */}
